@@ -78,14 +78,14 @@ if __name__ == '__main__':
     app.run(debug=True)
 '''    
 
-    if prediction == 1:
-        output = 'backorder'
-    elif prediction == 0:
-        output = 'test'
-    else:
-        output = 'not be predicted due to a system error'
+   if prediction == 1:
+       output = 'backorder'
+   elif prediction == 0:
+       output = 'test'
+   else:
+       output = 'not be predicted due to a system error'
 
-    return render_template('index.html', prediction_text = \
+   return render_template('index.html', prediction_text = \
                            'This item will {}'.format(output))
 
 if __name__ == '__main__':
