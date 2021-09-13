@@ -64,7 +64,7 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
- '''       
+        
     
    if prediction == 1:
        output = 'backorder'
@@ -73,6 +73,20 @@ if __name__ == '__main__':
 
    return render_template('index.html', prediction_text = \
                            output)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+'''    
+
+    if prediction == 1:
+        output = 'backorder'
+    elif prediction == 0:
+        output = 'not backorder'
+    else:
+        output = 'be predicted due to a system error'
+
+    return render_template('index.html', prediction_text = \
+                           'This item will {}'.format(output))
 
 if __name__ == '__main__':
     app.run(debug=True)
