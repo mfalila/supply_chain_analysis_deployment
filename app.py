@@ -81,9 +81,9 @@ if __name__ == '__main__':
     if prediction == 1:
         output = 'backorder'
     elif prediction == 0:
-        output = 'not backorder'
+        output = 'test'
     else:
-        output = 'be predicted due to a system error'
+        output = 'not be predicted due to a system error'
 
     return render_template('index.html', prediction_text = \
                            'This item will {}'.format(output))
